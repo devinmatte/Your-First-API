@@ -1,0 +1,15 @@
+{
+  "name": "devinmatte/Your-First-API",
+  "description": "An API template for PHP and Slim",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Devin Matte",
+      "email": "devin@devinmatte.com"
+    }
+  ],
+  "require": {
+    "slim/slim": "^3.9"
+  }
+}
