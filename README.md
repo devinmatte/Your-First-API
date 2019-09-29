@@ -68,15 +68,21 @@ public ActionResult<string> Delete()
 HTTP requests are made up of two parts, the payload, and the status code. The status code tells whether a request was successful, or failed. It also allows for you handle the results of requests based on the code that it provides. Status codes are generally pretty consistent, so if you're confused what code to return, just reference the [spec](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
 ```csharp
-# Return a 205
-@app.route("/success", methods=["GET"])
-def return_success():
-    return "This will return a 205 Status Code", 205
+// Return a 205
+[HttpGet("success")]
+public ActionResult<string> GetSuccess()
+{
+    HttpContext.Response.StatusCode = 205;
+    return "This will return a 205 Status Code";
+}
 
-# Return a 404
-@app.route("/fail", methods=["GET"])
-def return_fail():
-    return "This will return a 404 Status Code", 404
+// Return a 404
+[HttpGet("fail")]
+public ActionResult<string> GetFail()
+{
+    HttpContext.Response.StatusCode = 404;
+    return "This will return a 404 Status Code";
+}
 ```
 
 ### Get Data to Return
