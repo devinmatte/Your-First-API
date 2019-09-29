@@ -89,9 +89,10 @@ public ActionResult<string> GetFail()
 
 Often APIs are stateless, meaning that they get the data from somewhere. You aren't going to be storing data in data structures as your long term storage. Because of that you'll often interact with Databases. Each language works really well with a number of frameworks. I will recommend some good ORMs for each language below, but you should do your research to find one that works for your use case.
 Typically, you will create your object as a class, then the library you use for database interaction will handle serialization for that.
+
 <b>Recommended ORMs:</b>
 <ul>
-<li><a href="https://docs.mongodb.com/ecosystem/drivers/csharp/">NoSQL: MongoDB</a></li>
+<li><a href="https://docs.mongodb.com/ecosystem/drivers/csharp/">MongoDB</a></li>
 <li><a href="https://docs.microsoft.com/en-us/aspnet/entity-framework">Entity Framework</a></li>
 </ul>
 
